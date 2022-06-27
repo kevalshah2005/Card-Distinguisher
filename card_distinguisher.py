@@ -2,6 +2,7 @@
 
 import sensor, image, time, tf, pyb
 import network, usocket, sys
+from credentials import SSID, KEY # Hidden credentials file containing the SSID and key of my local network
 
 model_file = "ei-test-project-transfer-learning-tensorflow-lite-int8-quantized-model.lite" # TensorFlow Lite Model to read from
 
@@ -10,8 +11,6 @@ labels = ["pokemon_card", "regular_card"] # Labels to distinguish between
 ledRed = pyb.LED(1) # Red LED colour
 ledGreen = pyb.LED(2) # Green LED colour
 
-SSID  = "Keval's Arduino Portenta H7" # Network SSID
-KEY  = 'kevalshah2005' # Network key
 HOST = '' # Use first available interface
 PORT = 80 # Arbitrary non-privileged port
 
