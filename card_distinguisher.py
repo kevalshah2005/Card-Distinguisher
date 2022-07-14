@@ -28,7 +28,7 @@ clock = time.clock()
 print("Trying to connect... (may take a while)...")
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect(SSID, KEY)
+wlan.connect(SSID, KEY, timeout=30000)
 
 # We should have a valid IP now via DHCP
 print(wlan.ifconfig())
