@@ -34,7 +34,7 @@ wlan.connect(SSID, KEY, timeout = 30000)
 print(wlan.ifconfig())
 print("Status: " + str(wlan.status()))
 print("Active: " + str(wlan.active()))
-print("Scan: " + wlan.scan())
+print("Scan: " + str(wlan.scan()))
 
 # Create server socket
 s = usocket.socket(usocket.AF_INET, usocket.SOCK_STREAM)
